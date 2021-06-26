@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+      <CodeAnalysisRuleSet>..\code-analysis.ruleset</CodeAnalysisRuleSet>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="..\code-analysis.ruleset" Link="Properties\code-analisys.ruleset" />
+        <AdditionalFiles Include="..\stylecop.json" Link="Properties\stylecop.json" />
+    </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BinarySearchTree\BinarySearchTree.csproj" />
+    <ProjectReference Include="..\Comparers\Comparers.csproj" />
+    <ProjectReference Include="..\TimeStruct\TimeStruct.csproj" />
+  </ItemGroup>
+
+</Project>
